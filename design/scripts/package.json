@@ -1,0 +1,17 @@
+{
+  "name": "waveform-recorder",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Scripts to generate MP4 recordings of VoiceWaveform animations",
+  "scripts": {
+    "record": "node record-waveform.js",
+    "record-batch": "node record-waveform.js --batch",
+    "record-audio": "node record-waveform.js --audio",
+    "record-variants": "node waveform-variants.js"
+  },
+  "dependencies": {
+    "puppeteer": "^23.11.1",
+    "fluent-ffmpeg": "^2.1.3",
+    "fs-extra": "^11.2.0"
+  }
+}

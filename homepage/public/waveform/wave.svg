@@ -1,0 +1,42 @@
+<svg width="127" height="92" viewBox="0 0 127 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.8" filter="url(#filter0_d_52_2)">
+<rect x="20" y="14" width="87" height="52" rx="10" fill="#141414"/>
+<rect x="20.5" y="14.5" width="86" height="51" rx="9.5" stroke="#494949"/>
+<line x1="30.5" y1="45.9489" x2="30.5" y2="33.9489" stroke="white" stroke-linecap="round"/>
+<line x1="33.5" y1="49.6427" x2="33.5" y2="30.7448" stroke="white" stroke-linecap="round"/>
+<line x1="36.5" y1="45.6427" x2="36.5" y2="33.4795" stroke="white" stroke-linecap="round"/>
+<line x1="90.5" y1="45.9489" x2="90.5" y2="33.9489" stroke="white" stroke-linecap="round"/>
+<line x1="93.5" y1="49.6427" x2="93.5" y2="30.7448" stroke="white" stroke-linecap="round"/>
+<line x1="96.5" y1="45.6427" x2="96.5" y2="33.4795" stroke="white" stroke-linecap="round"/>
+<line x1="39.5" y1="55.6427" x2="39.5" y2="25.1122" stroke="white" stroke-linecap="round"/>
+<line x1="42.5" y1="52.6427" x2="42.5" y2="28.8469" stroke="white" stroke-linecap="round"/>
+<line x1="45.5" y1="46.6427" x2="45.5" y2="33.8673" stroke="white" stroke-linecap="round"/>
+<line x1="48.5" y1="48.6427" x2="48.5" y2="31.5816" stroke="white" stroke-linecap="round"/>
+<line x1="51.5" y1="54.6427" x2="51.5" y2="26.5612" stroke="white" stroke-linecap="round"/>
+<line x1="54.5" y1="46.6427" x2="54.5" y2="33.5611" stroke="white" stroke-linecap="round"/>
+<line x1="57.5" y1="48.6427" x2="57.5" y2="31.2754" stroke="white" stroke-linecap="round"/>
+<line x1="60.5" y1="54.6427" x2="60.5" y2="25.6428" stroke="white" stroke-linecap="round"/>
+<line x1="63.5" y1="47.6427" x2="63.5" y2="33.9489" stroke="white" stroke-linecap="round"/>
+<line x1="66.5" y1="50.6427" x2="66.5" y2="30.5204" stroke="white" stroke-linecap="round"/>
+<line x1="69.5" y1="55.6427" x2="69.5" y2="24.5" stroke="white" stroke-linecap="round"/>
+<line x1="72.5" y1="47.6427" x2="72.5" y2="33.0305" stroke="white" stroke-linecap="round"/>
+<line x1="75.5" y1="51.6427" x2="75.5" y2="29.6836" stroke="white" stroke-linecap="round"/>
+<line x1="78.5" y1="48.6427" x2="78.5" y2="31.2754" stroke="white" stroke-linecap="round"/>
+<line x1="81.5" y1="55.6427" x2="81.5" y2="24.5" stroke="white" stroke-linecap="round"/>
+<line x1="84.5" y1="49.6427" x2="84.5" y2="31.051" stroke="white" stroke-linecap="round"/>
+<line x1="87.5" y1="53.6427" x2="87.5" y2="27.0918" stroke="white" stroke-linecap="round"/>
+</g>
+<defs>
+<filter id="filter0_d_52_2" x="0" y="-6" width="127" height="98" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="6"/>
+<feGaussianBlur stdDeviation="10"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_52_2"/>
+<feBlend mode="normal" in="BackgroundImageFix" in2="effect1_dropShadow_52_2" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+</filter>
+</defs>
+</svg>

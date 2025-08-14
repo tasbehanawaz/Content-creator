@@ -1,0 +1,7 @@
+nohup: ignoring input
+   ▲ Next.js 15.4.6
+   - Environments: .env
+   - Experiments (use with caution):
+     · optimizePackageImports
+
+   Creating an optimized production build ...

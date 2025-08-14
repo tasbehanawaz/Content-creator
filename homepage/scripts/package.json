@@ -1,0 +1,20 @@
+{
+  "name": "waveform-recorder",
+  "version": "1.0.0",
+  "description": "Helper scripts for recording VoiceWaveform component as MP4 videos",
+  "type": "module",
+  "scripts": {
+    "record": "node record-waveform.js",
+    "record-batch": "node record-waveform.js --batch",
+    "record-audio": "node record-waveform.js --audio",
+    "record-variants": "node waveform-variants.js --all",
+    "record-variant": "node waveform-variants.js --variant",
+    "install-deps": "npm install"
+  },
+  "dependencies": {
+    "puppeteer": "^21.11.0",
+    "fs-extra": "^11.2.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "node-web-audio-api": "^1.0.4"
+  }
+}

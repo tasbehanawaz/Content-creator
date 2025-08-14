@@ -1,0 +1,241 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Linebeam';
+  src: url('/fonts/Linebeam.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    /* Light theme (default) */
+    --background: 43 20% 97%;
+    /* #F8F7F2 - Baby Powder */
+    --foreground: 0 0% 6.7%;
+    /* #111111 */
+
+    --muted: 0 0% 97.3%;
+    /* #F8F9FA */
+    --muted-foreground: 0 0% 40%;
+    /* #666666 */
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 6.7%;
+
+    --border: 0 0% 89.8%;
+    /* #E5E7EB */
+    --input: 0 0% 89.8%;
+
+    --card: 0 0% 97.3%;
+    /* #F8F9FA */
+    --card-foreground: 0 0% 6.7%;
+
+    --primary: 16 95% 51%;
+    /* #FF5E01 - brand orange */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 25 100% 58%;
+    /* #FFA726 - warm orange */
+    --secondary-foreground: 0 0% 6.7%;
+
+    --accent: 0 0% 96.1%;
+    /* #F5F5F5 */
+    --accent-foreground: 0 0% 6.7%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --ring: 16 95% 51%;
+
+    --radius: 0.5rem;
+
+    --color-one: #ff6b6b;
+    --color-two: #4ecdc4;
+    --navigation-height: 60px;
+    --shimmer-width: 100px;
+  }
+
+  .dark {
+    /* Dark theme */
+    --background: 0 0% 2%;
+    /* #050505 */
+    --foreground: 0 0% 100%;
+    /* #FFFFFF */
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+
+    --popover: 0 0% 2%;
+    --popover-foreground: 0 0% 100%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 100%;
+
+    --primary: 16 95% 51%;
+    /* #FF5E01 - brand orange (same in both themes) */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 35 100% 77%;
+    /* #FFD18C */
+    --secondary-foreground: 0 0% 2%;
+
+    --accent: 0 0% 93%;
+    /* #ECECEC */
+    --accent-foreground: 0 0% 2%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+
+    --ring: 16 95% 51%;
+
+    --radius: 0.5rem;
+
+    --color-one: #ff6b6b;
+    --color-two: #4ecdc4;
+  }
+
+  ::selection {
+    @apply text-black;
+    @apply bg-cyan-400;
+  }
+
+  *:focus-visible {
+    @apply outline;
+    @apply outline-2;
+    @apply outline-offset-2;
+    @apply outline-pink-500;
+  }
+
+  * {
+    @apply border-border;
+    @apply min-w-0;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+
+  html {
+    @apply h-full;
+  }
+
+  body {
+    @apply h-full;
+  }
+
+  h1 {
+    @apply font-bold;
+    @apply text-4xl;
+    @apply text-foreground;
+    @apply lg:text-6xl;
+    @apply bg-clip-text;
+    @apply drop-shadow-[0_0_15px_rgba(0_0_0_0.3)] dark:drop-shadow-[0_0_15px_rgba(0_0_0_1)];
+    @apply lg:text-transparent;
+    @apply lg:bg-gradient-to-br;
+    @apply from-gray-900 dark:from-white;
+    @apply to-gray-600 dark:to-neutral-400;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out forwards;
+  }
+
+  .animate-fade-up {
+    animation: fade-up 0.6s ease-out forwards;
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s linear infinite;
+    background-size: var(--shimmer-width) 100%;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  [style*="--animation-delay"] {
+    animation-delay: var(--animation-delay);
+  }
+
+  .font-linebeam {
+    font-family: 'Linebeam', sans-serif;
+  }
+
+  @keyframes shine-ring {
+    0% {
+      box-shadow:
+        0 0 0 0 rgba(59, 130, 246, 0.7),
+        0 0 0 0 rgba(59, 130, 246, 0.4),
+        inset 0 0 0 1px rgba(59, 130, 246, 0.3);
+    }
+
+    25% {
+      box-shadow:
+        0 0 0 2px rgba(59, 130, 246, 0.5),
+        0 0 0 4px rgba(59, 130, 246, 0.2),
+        inset 0 0 0 1px rgba(59, 130, 246, 0.4);
+    }
+
+    50% {
+      box-shadow:
+        0 0 0 4px rgba(59, 130, 246, 0.3),
+        0 0 0 8px rgba(59, 130, 246, 0.1),
+        inset 0 0 0 1px rgba(59, 130, 246, 0.5);
+    }
+
+    75% {
+      box-shadow:
+        0 0 0 2px rgba(59, 130, 246, 0.5),
+        0 0 0 4px rgba(59, 130, 246, 0.2),
+        inset 0 0 0 1px rgba(59, 130, 246, 0.4);
+    }
+
+    100% {
+      box-shadow:
+        0 0 0 0 rgba(59, 130, 246, 0.7),
+        0 0 0 0 rgba(59, 130, 246, 0.4),
+        inset 0 0 0 1px rgba(59, 130, 246, 0.3);
+    }
+  }
+
+  @keyframes shine-sweep {
+    0% {
+      background-position: -100% 0;
+    }
+
+    100% {
+      background-position: 100% 0;
+    }
+  }
+
+  .animate-shine-ring {
+    animation: shine-ring 2s ease-in-out infinite;
+  }
+
+  .ring-shine-animation {
+    position: relative;
+  }
+
+  .ring-shine-animation::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: inherit;
+    background: linear-gradient(90deg,
+        transparent,
+        rgba(59, 130, 246, 0.4),
+        transparent);
+    background-size: 200% 100%;
+    animation: shine-sweep 1.5s ease-in-out infinite;
+    z-index: -1;
+  }
+}

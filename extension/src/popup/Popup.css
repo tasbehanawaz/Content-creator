@@ -1,0 +1,43 @@
+@media (prefers-color-scheme: light) {
+  a:hover {
+    color: #61dafb;
+  }
+}
+
+main {
+  text-align: center;
+  margin: 0 auto;
+}
+
+h3 {
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2rem;
+  margin: 2rem auto;
+}
+
+a {
+  font-size: 0.5rem;
+  margin: 0.5rem;
+  color: #cccccc;
+  text-decoration: none;
+}
+
+.main-btn {
+  width: 100px;
+  height: 100px;
+}
+@keyframes spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spinning {
+  animation: spinning 2s linear infinite;
+  border: #f9c23c solid 4px;
+}

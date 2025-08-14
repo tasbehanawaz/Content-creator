@@ -1,0 +1,13 @@
+# Absolute ignores
+.DS_Store
+.next
+.vercel
+package-lock.json
+build
+node_modules
+references
+supabase
+.env
+
+# Pattern ignores
+*.pem
