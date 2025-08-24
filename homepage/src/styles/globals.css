@@ -1,6 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* For now, let's comment out the Nova font until we have the font files */
+/*
+@font-face {
+  font-family: 'Nova';
+  src: url('/fonts/Nova.woff2') format('woff2'),
+       url('/fonts/Nova.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nova Square';
+  src: url('/fonts/NovaSquare.woff2') format('woff2'),
+       url('/fonts/NovaSquare.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+*/
 
 @font-face {
   font-family: 'Linebeam';

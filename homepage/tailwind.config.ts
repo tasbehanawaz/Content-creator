@@ -44,7 +44,14 @@ const config: Config = {
         'secondary-foreground': 'hsl(var(--secondary-foreground))',
         accent: 'hsl(var(--accent))',
         'accent-foreground': 'hsl(var(--accent-foreground))',
-        'baby-powder': '#F8F7F2'
+        'baby-powder': '#F8F7F2',
+        primary: '#FEC601', // Mikado Yellow
+        secondary: '#2364AA', // Green Blue
+        accent: {
+          blue: '#3DA5D9', // Piction Blue
+          green: '#73BFB8', // Verdigris
+          orange: '#EA7317', // Pumpkin
+        }
       },
       borderRadius: {
         lg: `var(--radius)`,
@@ -53,6 +60,10 @@ const config: Config = {
       },
       fontFamily: {
         sans: ['var(--font-geist-sans)', ...fontFamily.sans],
+        'nova': ['Nova', 'sans-serif'],
+        'nova-square': ['Nova Square', 'sans-serif'],
+        'space-grotesk': ['Space Grotesk', 'sans-serif'],
+        'montserrat': ['Montserrat', 'sans-serif'],
       },
       keyframes: {
         'accordion-down': {

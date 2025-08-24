@@ -1,125 +1,100 @@
 'use client';
 
 import { motion } from 'framer-motion';
-
-import { AIAgencyControlFeature } from '@/components/features/AIAgencyControlFeature';
-import { AITakesOverFeature } from '@/components/features/AITakesOverFeature';
-import AllModelsSection from '@/components/features/AllModelsSection';
-import ContextMenuSection from '@/components/features/ContextMenuSection';
-import { FeatureCarousel } from '@/components/features/FeatureCarousel';
-import { NoiseTexture } from '@/components/features/NoiseTexture';
-import { SoundWaveParticles } from '@/components/features/SoundWaveParticles';
-import { TiredVsWiredFeature } from '@/components/features/TiredVsWiredFeature';
-import { UniversalVoiceControlFeature } from '@/components/features/UniversalVoiceControlFeature';
+import { ArrowRight, Bot, Palette, Share, Sparkles, Video } from 'lucide-react';
 
 export default function FeaturesSection() {
+  const features = [
+    {
+      icon: <Palette className="w-6 h-6" />,
+      title: "Design Tools",
+      description: "Create stunning visuals with our AI-powered design tools",
+      gradient: "from-[#FEC601]/10 via-[#EA7317]/10 to-[#2364AA]/10",
+      iconColor: "text-[#FEC601]"
+    },
+    {
+      icon: <Video className="w-6 h-6" />,
+      title: "Video Creation",
+      description: "Edit and enhance videos with just a few clicks",
+      gradient: "from-[#73BFB8]/10 via-[#3DA5D9]/10 to-[#2364AA]/10",
+      iconColor: "text-[#73BFB8]"
+    },
+    {
+      icon: <Share className="w-6 h-6" />,
+      title: "Social Media",
+      description: "Schedule and manage your content across platforms",
+      gradient: "from-[#3DA5D9]/10 via-[#73BFB8]/10 to-[#EA7317]/10",
+      iconColor: "text-[#3DA5D9]"
+    },
+    {
+      icon: <Bot className="w-6 h-6" />,
+      title: "AI Assistant",
+      description: "Get content suggestions and writing help instantly",
+      gradient: "from-[#EA7317]/10 via-[#FEC601]/10 to-[#73BFB8]/10",
+      iconColor: "text-[#EA7317]"
+    }
+  ];
+
   return (
-    <div className="w-full flex items-center justify-center bg-transparent">
-      <section className="relative max-w-full w-full py-24 flex flex-col items-center justify-center overflow-hidden bg-background border-x border-t border-border/25 shadow-sm shadow-purple-500/5">
-        <NoiseTexture />
-        <SoundWaveParticles />
-        <div className="relative z-10 w-full flex flex-col gap-32">
-
-          {/* Features Carousel: Header */}
-          <div className="flex flex-col items-center justify-center">
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-center mb-6 bg-gradient-to-br from-yellow-400 via-pink-400 to-blue-500 bg-clip-text text-transparent leading-tight">
-              Stop Browsing. Start{' '}
-              <motion.span
-                className="text-primary italic inline font-linebeam relative cursor-pointer"
-                initial={{ opacity: 1 }}
-                whileHover="hover"
-              >
-                <motion.span
-                  className="relative inline-block"
-                  variants={{
-                    hover: {
-                      x: [0, 2, 0],
-                      transition: {
-                        duration: 0.5,
-                        ease: "easeOut"
-                      }
-                    }
-                  }}
-                >
-                  Doing
-                </motion.span>
-                {/* Speed blur effect on hover */}
-                <motion.span
-                  className="absolute inset-0 text-primary italic inline font-linebeam"
-                  initial={{ opacity: 0, x: 0 }}
-                  variants={{
-                    hover: {
-                      opacity: [0, 0.4, 0],
-                      x: [0, -15, -30],
-                      filter: ['blur(0px)', 'blur(3px)', 'blur(6px)'],
-                      transition: {
-                        duration: 0.6,
-                        ease: "easeOut"
-                      }
-                    }
-                  }}
-                >
-                  Doing
-                </motion.span>
-                {/* Trailing speed lines on hover */}
-                <motion.div
-                  className="absolute inset-0 flex items-center overflow-visible"
-                  initial={{ opacity: 0 }}
-                >
-                  {[...Array(3)].map((_, i) => (
-                    <motion.div
-                      key={i}
-                      className="absolute h-[1px] bg-gradient-to-r from-primary/60 to-transparent origin-left"
-                      style={{
-                        top: `${35 + i * 12}%`,
-                        width: '60px',
-                        right: '100%'
-                      }}
-                      initial={{ scaleX: 0, opacity: 0 }}
-                      variants={{
-                        hover: {
-                          scaleX: [0, 1, 1, 0],
-                          opacity: [0, 0.6, 0.3, 0],
-                          x: [-10, -20, -40, -60],
-                          transition: {
-                            duration: 0.6,
-                            delay: i * 0.05,
-                            ease: "easeOut"
-                          }
-                        }
-                      }}
-                    />
-                  ))}
-                </motion.div>
-              </motion.span>
-            </h2>
-            <p className="text-xl md:text-2xl text-muted-foreground text-center mb-12 max-w-4xl leading-relaxed">
-              Your voice becomes instant action across any website. No popups. No clutter. Just pure productivity at the speed of speech.
-            </p>
-          </div>
-
-          {/* Feature Carousel */}
-          <FeatureCarousel />
-
-          {/* All Models Section */}
-          <AllModelsSection />
-
-          {/* Tired vs Wired Feature */}
-          <TiredVsWiredFeature />
-
-          {/* Context Menu Section */}
-          <ContextMenuSection />
-
-          {/* AI Takes Over Feature */}
-          <AITakesOverFeature />
-
-          {/* Universal Voice Control Feature */}
-          <UniversalVoiceControlFeature />
-
-          {/* AI Agency Control Feature */}
-          <AIAgencyControlFeature />
+    <section className="w-full py-24 bg-background">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-5xl font-bold mb-6 max-w-[1200px]"
+          >
+            <span className="bg-gradient-to-r from-[#2364AA] to-[#73BFB8] bg-clip-text text-transparent inline-block">
+              Everything you need to{' '}
+            </span>
+            <span className="text-[#FEC601] inline-block ml-1">
+              create amazing content
+            </span>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto whitespace-nowrap px-4"
+          >
+            Powerful tools to help you create, edit, and publish content faster than ever
+          </motion.p>
         </div>
-      </section>
-    </div>
+
+        {/* Feature Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {features.map((feature, index) => (
+            <motion.div
+              key={feature.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className="group relative rounded-2xl overflow-hidden backdrop-blur-sm"
+            >
+              <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-50 group-hover:opacity-70 transition-opacity`} />
+              <div className="relative p-8 border border-border/50 rounded-2xl h-full hover:shadow-lg transition-all duration-300">
+                <div className={`${feature.iconColor} mb-6 transform group-hover:scale-110 transition-transform duration-300`}>
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-foreground">
+                  {feature.title}
+                </h3>
+                <p className="text-muted-foreground mb-4">
+                  {feature.description}
+                </p>
+                <div className={`flex items-center ${feature.iconColor} font-medium`}>
+                  Learn more
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
